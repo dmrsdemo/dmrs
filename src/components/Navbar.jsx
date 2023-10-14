@@ -109,7 +109,7 @@ const MobileNavbar = ({ nav }) => {
 
         <div className="flex gap-2">
           <NavLink to={'./contact'} className='whitespace-nowrap'>
-            <Button size='xs' className="m-1">Get Started</Button>
+            <Button size='xs' className="m-1">Get Started!</Button>
           </NavLink>
           <button className='text-lg' onClick={() => { setIsOpen(!isOpen) }}>=</button>
         </div>
