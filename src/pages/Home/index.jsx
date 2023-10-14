@@ -180,7 +180,7 @@ const Home = () => {
               </p>
 
               <Button size="xs" variant='default' className=" w-fit !bg-accent-400 !ring-accent-400 text-white">
-                <Link to="/dmrs-fe/australia">
+                <Link to="/dmrs/australia">
                   Go to DMRS Australia
                 </Link>
               </Button>
@@ -205,7 +205,7 @@ const Home = () => {
               </p>
 
               <Button size="xs" variant='default' className=" w-fit !bg-accent-400 !ring-accent-400 text-white">
-                <Link to="/dmrs-fe/thailand">
+                <Link to="/dmrs/thailand">
                   Go to DMRS Thailand
                 </Link>
               </Button>
@@ -230,7 +230,7 @@ const Home = () => {
               </p>
 
               <Button size="xs" variant='default' className="w-fit">
-                <Link to="/dmrs-fe/contact">
+                <Link to="/dmrs/contact">
                   Get Started
                 </Link>
               </Button>
