@@ -6414,18 +6414,18 @@ onmessage = function(messageEvent) {
               desktop:text-2xl hd:text-3xl
               `,children:["DMRS ",M.jsx("span",{className:"text-primary-300",children:"Australia"})]}),M.jsx("p",{className:`text-xs text-justify 
               desktop:text-sm hd:text-md
-              `,children:"Dan Murdoch Risk Services (Australia) Pty Ltd is the parent company of our operational division Dan Murdoch Risk Services (Thailand) Limited."}),M.jsx(wc,{size:"xs",variant:"default",className:" w-fit !bg-accent-400 !ring-accent-400 text-white",children:M.jsx(wr,{to:"/dmrs-fe/australia",children:"Go to DMRS Australia"})})]})}),M.jsx(U2,{children:M.jsxs(ey,{imageUrl:"./images/thailand-map.png",children:[M.jsxs("h2",{className:`text-xl font-bold 
+              `,children:"Dan Murdoch Risk Services (Australia) Pty Ltd is the parent company of our operational division Dan Murdoch Risk Services (Thailand) Limited."}),M.jsx(wc,{size:"xs",variant:"default",className:" w-fit !bg-accent-400 !ring-accent-400 text-white",children:M.jsx(wr,{to:"/dmrs/australia",children:"Go to DMRS Australia"})})]})}),M.jsx(U2,{children:M.jsxs(ey,{imageUrl:"./images/thailand-map.png",children:[M.jsxs("h2",{className:`text-xl font-bold 
               desktop:text-2xl 
               hd:text-3xl
               `,children:["DMRS ",M.jsx("span",{className:"text-primary-300",children:"Thailand"})]}),M.jsx("p",{className:`text-xs text-justify 
               desktop:text-sm 
-              hd:text-md`,children:"Dan Murdoch Risk Services (Thailand) Co. Ltd. staff are trained detectives and intelligence analysts who use both objective and subjective thinking to gather manual online data leading to intelligence for many Fortune 500 companies worldwide."}),M.jsx(wc,{size:"xs",variant:"default",className:" w-fit !bg-accent-400 !ring-accent-400 text-white",children:M.jsx(wr,{to:"/dmrs-fe/thailand",children:"Go to DMRS Thailand"})})]})}),M.jsx(U2,{children:M.jsxs(ey,{children:[M.jsx("h2",{className:`font-bold text-md 
+              hd:text-md`,children:"Dan Murdoch Risk Services (Thailand) Co. Ltd. staff are trained detectives and intelligence analysts who use both objective and subjective thinking to gather manual online data leading to intelligence for many Fortune 500 companies worldwide."}),M.jsx(wc,{size:"xs",variant:"default",className:" w-fit !bg-accent-400 !ring-accent-400 text-white",children:M.jsx(wr,{to:"/dmrs/thailand",children:"Go to DMRS Thailand"})})]})}),M.jsx(U2,{children:M.jsxs(ey,{children:[M.jsx("h2",{className:`font-bold text-md 
               desktop:text-2xl 
               hd:text-3xl
               `,children:"Specialization"}),M.jsx("p",{className:`text-xs text-justify 
               desktop:text-sm 
               hd:text-md
-              `,children:"We specialize in pharmaceuticals and the protection of and identifying risks associated with medicines worldwide."}),M.jsx(wc,{size:"xs",variant:"default",className:"w-fit",children:M.jsx(wr,{to:"/dmrs-fe/contact",children:"Get Started"})})]})})]})]}),M.jsxs("section",{className:`relative flex  z-[1] gap-5 px-6 py-8
+              `,children:"We specialize in pharmaceuticals and the protection of and identifying risks associated with medicines worldwide."}),M.jsx(wc,{size:"xs",variant:"default",className:"w-fit",children:M.jsx(wr,{to:"/dmrs/contact",children:"Get Started"})})]})})]})]}),M.jsxs("section",{className:`relative flex  z-[1] gap-5 px-6 py-8
         mobile:py-10 mobile:px-12 
         tablet:px-12
         laptop:p-20
