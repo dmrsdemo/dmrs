@@ -40,9 +40,7 @@ const slideRight = {
 
 const SecondSection = () => {
   return (
-    <div className="w-full h-full flex items-center px-6
-      mobile:px-6
-    ">
+    <div className="w-full h-full flex items-center px-6">
       <motion.div 
         whileInView={{ 
           opacity: [0, 1], 
@@ -64,11 +62,10 @@ const SecondSection = () => {
             <div 
               key={ index } 
               className="grid h-full gap-2 items-center text-white
-              mobile:
               tablet:gap-3
               laptop:grid-cols-2 laptop:gap-10
               desktop:gap-20
-            ">
+          ">
               <motion.div 
                 variants={ fadeRight } 
                 viewport={{once:true}}
@@ -76,8 +73,7 @@ const SecondSection = () => {
                 custom={ index } 
                 className='flex items-center w-full'
               >
-                <h1 className="relative text-md 
-                  mobile:text-md 
+                <h1 className="relative text-md
                   tablet:text-lg 
                   laptop:text-xl 
                   desktop:text-2xl 

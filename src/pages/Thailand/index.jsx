@@ -199,7 +199,7 @@ const Thailand = () => {
       {/* DMRS Thailand section */}
       <section className="navTrigger">
         <div 
-          className="relative flex flex-col w-full gap-6 px-6 py-8 h-fit mobile:py-10 mobile:px-12 mobile:h-fit mobile:flex-col tablet:items-center tablet:px-12 tablet:flex-row laptop:p-20 laptop:gap-24 desktop:min-h-screen desktop:gap-20 desktop:px-24 z-20">
+          className="relative flex flex-col w-full gap-6 px-6 py-8 h-fit mobile:py-10 mobile:px-12 tablet:items-center tablet:px-12 tablet:flex-row laptop:p-20 laptop:gap-24 desktop:min-h-screen desktop:gap-20 desktop:px-24 z-20">
           <div className="flex w-full h-[300px] bg-gray-200 rounded-tl-[2rem] rounded-br-[2rem] tablet:h-[calc((3/5)*100vh)] tablet:w-1/2 laptop:w-1/2 tablet:rounded-tl-[4rem] tablet:rounded-br-[4rem] overflow-hidden">
             <img src="./images/dmrs-thailand.webp" alt="" className="object-cover w-full h-full"/>
           </div>
@@ -211,9 +211,9 @@ const Thailand = () => {
             whileInView="animate"
             viewport={{once:true}}
             custom={1}
-            className="z-10 flex flex-col justify-center w-full gap-4 mobile:w-full mobile:gap-4 tablet:w-1/2 tablet:gap-10">
-            <h2 className="flex flex-col text-lg font-bold mobile:text-xl tablet:text-xl">Dan Murdoch Risk Services <strong className="text-lg font-bold text-primary-300 mobile:text-2xl tablet:text-2xl">Thailand.</strong></h2>
-            <div className="flex flex-col gap-4 text-xs mobile:text-sm laptop:text-sm desktop:text-base">
+            className="z-10 flex flex-col justify-center w-full gap-4 tablet:w-1/2 tablet:gap-10">
+            <h2 className="flex flex-col text-lg font-bold mobile:text-xl">Dan Murdoch Risk Services <strong className="text-lg font-bold text-primary-300 mobile:text-2xl ">Thailand.</strong></h2>
+            <div className="flex flex-col gap-4 text-xs mobile:text-sm desktop:text-base">
               <p><strong className="text-accent-500">DMRS</strong> <strong className="text-primary-300">Thailand</strong> Co. Limited is based in Thailand with staff also in the Philippines, Australia, Hong Kong and China with trusted and verified agents in many global locations.</p>
             </div>
           </motion.div>
@@ -225,13 +225,13 @@ const Thailand = () => {
         <motion.div
           whileInView={{ opacity: [0,1], transition: { duration: 1, delay: 0.5 }}} 
           viewport={{once:true}}
-          className="flex w-full gap-6 py-8 min-h-fit justify-center items-center
-          before:absolute before:content-[''] before:top-0 before:bg-gradient-to-t before:from-background-dark before:to-white before:min-h-[5px] before:min-w-full after:z-10 
-          after:absolute after:content-[''] after:bottom-0 after:bg-gradient-to-b after:from-background-dark after:to-white after:min-h-[5px] after:min-w-full before:z-10 
-          mobile:py-14 mobile:px-12 mobile:h-fit mobile:flex-col 
+          className="flex w-full gap-6 py-14 min-h-fit justify-center items-center
+          mobile:px-12 mobile:h-fit mobile:flex-col 
           tablet:items-center tablet:px-24 tablet:flex-col 
           laptop:p-20 laptop:gap-24 laptop:w-full 
           desktop:w-[90%] desktop:min-h-screen desktop:gap-20 desktop:px-24
+          before:absolute before:content-[''] before:top-0 before:bg-gradient-to-t before:from-background-dark before:to-background-light before:min-h-[5px] before:min-w-full after:z-10 
+          after:absolute after:content-[''] after:bottom-0 after:bg-gradient-to-b after:from-background-dark after:to-background-light after:min-h-[5px] after:min-w-full before:z-10 
         ">
         <TryComponent />
           <SecondSection />
@@ -242,9 +242,9 @@ const Thailand = () => {
       {/* Services */}
       <div id="services_th" className="pt-10">
         <motion.section 
-          className="relative flex items-start min-w-full min-h-full pb-20 overflow-hidden align-middle 
-          mobile:px-6 mobile:max-w-full 
-          tablet:px-12 tablet:max-w-full
+          className="relative flex items-start min-w-full min-h-full pb-20 overflow-hidden align-middle px-6
+          mobile:max-w-full 
+          tablet:px-12
           tablet:mt-10 
           laptop:gap-10"
           variants={fadeInAnimationVariants}
@@ -255,13 +255,10 @@ const Thailand = () => {
           custom={1}
           >
           <div className="absolute left-0 grid w-full h-full grid-cols-3 -top-10 
-            mobile:grid-cols-4 
-            desktop:grid-cols-8">
+            laptop:grid-cols-8">
             <GridFiller cellCount={40} cellClass={'border border-background-dark/5'} />
           </div>
           <div className="flex flex-col h-full gap-6 px-6
-              mobile:px-6  
-              tablet:px-6 
               laptop:px-12 
               desktop:px-[4.5rem]">
             <div className="flex flex-col items-start gap-2">
@@ -283,8 +280,7 @@ const Thailand = () => {
                 viewport={{once:true}}
                 custom={6}
                 className="z-10 grid grid-rows-1 gap-4 fill-black justify-center w-full
-                mobile:grid mobile:grid-rows-1 mobile:gap-4
-                tablet:grid tablet:grid-cols-2 tablet:gap-6
+                tablet:grid-cols-2 tablet:gap-6
                 desktop:grid-cols-3"
               >
                 {services.map((item, index) => <Services key={index} name={item.name} icon={item.icon} content={item.content} subContents={item.subContent}/> )}
@@ -296,14 +292,12 @@ const Thailand = () => {
 
       {/* Other Services */}
       <section className="flex flex-col items-center justify-center w-full h-full gap-10 mb-10 px-6
-          mobile:px-6 mobile:max-w-full 
+          mobile:max-w-full 
           tablet:px-12 tablet:max-w-full
           tablet:mt-10 
           laptop:gap-10"
         >
         <motion.div className="flex flex-col items-start gap-2 px-6
-          mobile:px-6  
-          tablet:px-6 
           laptop:px-12 
           desktop:px-[4.5rem]"
         variants={fadeInAnimationVariants}

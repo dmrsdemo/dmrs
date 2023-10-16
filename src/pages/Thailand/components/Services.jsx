@@ -9,8 +9,7 @@ const Services = ({ name, icon, content, subContents }) => {
   return (
     <div
       className={`relative overflow-hidden ease-in-out duration-300 flex flex-col text-base gap-2 bg-white ring-1 ring-gray-400 fill-accent-400/20 justify-center items-start aspect-video 
-        ${isActive ? 'min-h-[300px] max-w-[100%] mobile:min-h-[320px] laptop:min-h-[400px] h-fit scale-[1.03] fill-accent-200/20 text-white ': 'min-h-[300px] max-w-[100%] tablet:min-h-[320px] desktop:min-h-[360px] hover:scale-[1.03] hover:text-white'}
-        mobile:text-md
+        ${isActive ? 'min-h-[320px] max-w-[100%] laptop:min-h-[400px] h-fit scale-[1.03] fill-accent-200/20 text-white ': 'min-h-[300px] max-w-[100%] tablet:min-h-[320px] desktop:min-h-[360px] hover:scale-[1.03] hover:text-white'}
         tablet:min-w-full
         laptop:text-md 
         desktop:text-md
