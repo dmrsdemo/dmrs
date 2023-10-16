@@ -22,8 +22,8 @@ const fadeRight = {
     opacity: [0,1],
     x: [-80, 0],
     transition: {
-      delay: 0.3 * index+1,
-      duration: 0.4
+      delay: 0.3 * index + 1,
+      duration: 0.7
     }
   })
 }
@@ -32,7 +32,7 @@ const slideRight = {
   animate: (index) => ({
     width: ['110%', '0%'], 
     transition: {
-      delay: 0.4 * index+1,
+      delay: 0.4 * index + 1,
       duration: .7
     }
   })
@@ -48,20 +48,19 @@ const SecondSection = () => {
           transition: { 
             delay: 1, 
             duration: 1, 
-            staggerChildren: 0.1
+            staggerChildren: 0.3
           }
         }}
         viewport={{once:true}}
-        className="flex flex-col h-full gap-y-10 gap-x-5 items-center text-white
+        className="grid h-full gap-y-10 gap-x-5 items-center text-white
         tablet:gap-y-20
-        laptop:gap-y-[9rem]
         desktop:gap-y-32
         ">
         {contents.map((content, index) => {
           return(
             <div 
               key={ index } 
-              className="grid h-full gap-2 items-center text-white
+              className="grid grid-cols-1 h-full gap-2 items-center text-white
               tablet:gap-3
               laptop:grid-cols-2 laptop:gap-10
               desktop:gap-20

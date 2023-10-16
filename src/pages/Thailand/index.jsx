@@ -222,6 +222,7 @@ const Thailand = () => {
       
       {/* DMRS Thailand Section 2 */}
       <section className="flex items-center justify-center relative overflow-hidden">
+        <TryComponent />
         <motion.div
           whileInView={{ opacity: [0,1], transition: { duration: 1, delay: 0.5 }}} 
           viewport={{once:true}}
@@ -233,7 +234,6 @@ const Thailand = () => {
           before:absolute before:content-[''] before:top-0 before:bg-gradient-to-t before:from-background-dark before:to-background-light before:min-h-[5px] before:min-w-full after:z-10 
           after:absolute after:content-[''] after:bottom-0 after:bg-gradient-to-b after:from-background-dark after:to-background-light after:min-h-[5px] after:min-w-full before:z-10 
         ">
-        <TryComponent />
           <SecondSection />
           <div className="absolute top-0 bg-gradient-to-t from-background-dark to-white min-h-[5px] min-w-full z-10" />
         </motion.div>
