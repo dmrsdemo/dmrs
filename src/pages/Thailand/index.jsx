@@ -87,7 +87,7 @@ const Thailand = () => {
       {
         name:<p className="self-start font-bold">Research</p>,
         icon:<BussinessIntelligence width={size} height={size} />,
-        content: <p className="text-sm">If you have a problem whether it is offline or online we proactively research using our research methodology and tools to give you an appropriate and considered answer.</p>,
+        content: <p className="text-sm">If you have a problem whether it is offline or online we proactively conduct targeted research using a lateral thinking approach and methodology to give you an appropriate and considered reply with evidentiary inclusions you can trust.</p>,
         subContent: 
         [
           {
@@ -99,7 +99,7 @@ const Thailand = () => {
       {
         name:<p className="self-start font-bold">Investigations</p>, 
         icon:<UndercoverOperations width={size} height={size} />,
-        content: <p className="text-sm">We investigate your specific problem are experienced in correct evidence gathering procedures and are aware of the complex skills required to ensure that the integrity of a company is never placed in doubt.</p>,
+        content: <p className="text-sm">Our operatives are experienced in correct evidence gathering procedures and are aware of the complex skills required to ensure that the integrity of a client company is never placed in doubt. DMRS conduct both low level investigations and high level intense undercover operations worldwide.</p>,
         subContent: 
         [
           {
@@ -242,9 +242,9 @@ const Thailand = () => {
       {/* Services */}
       <div id="services_th" className="pt-10">
         <motion.section 
-          className="relative flex items-start min-w-full min-h-full pb-20 overflow-hidden align-middle px-6
+          className="relative flex items-start min-w-full min-h-full pb-20 overflow-hidden align-middle px-2
           mobile:max-w-full 
-          tablet:px-12
+          tablet:px-6
           tablet:mt-10 
           laptop:gap-10"
           variants={fadeInAnimationVariants}
@@ -266,7 +266,7 @@ const Thailand = () => {
               <p
                 className="z-10 gap-1 text-sm mobile:text-xs desktop:text-xs"
               >
-                The services DMRS offers fall into three categories
+                The services DMRS offer fall into three categories INTELLIGENCE, INVESTIGATIONS, RESEARCH
                 <motion.span className="font-bold" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true}} custom={2}> INTELLIGENCE,</motion.span> 
                 <motion.span className="font-bold" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true}} custom={4}> INVESTIGATIONS,</motion.span> 
                 <motion.span className="font-bold" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true}} custom={6}> RESEARCH.</motion.span> 
@@ -291,9 +291,9 @@ const Thailand = () => {
       </div>
 
       {/* Other Services */}
-      <section className="flex flex-col items-center justify-center w-full h-full gap-10 mb-10 px-6
+      <section className="flex flex-col items-center justify-center w-full h-full gap-10 mb-10 px-2
           mobile:max-w-full 
-          tablet:px-12 tablet:max-w-full
+          tablet:px-6 tablet:max-w-full
           tablet:mt-10 
           laptop:gap-10"
         >
@@ -307,7 +307,7 @@ const Thailand = () => {
         custom={4}
         >
           <h2 className="z-10 font-bold text-md mobile:text-xl laptop:text-xl">Other Services</h2>
-          <p className="z-10 text-sm mobile:text-xs desktop:text-base">However, as an additional service to our partners, we offer further unique capabilities such as -</p>
+          <p className="z-10 text-sm mobile:text-xs desktop:text-base">As an additional service to our partners, we offer further unique capabilities such as -</p>
           <OtherServices /> 
         </motion.div>
       </section>
