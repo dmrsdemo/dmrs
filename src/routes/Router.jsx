@@ -15,7 +15,7 @@ import NotFound from '../pages/404'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/dmrs" element={<App/>}>
+        <Route path="/" element={<App/>}>
             <Route index element={<Home/>}/>
             
             <Route path="thailand" element={<Thailand/>}/>

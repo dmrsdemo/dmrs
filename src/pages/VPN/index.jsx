@@ -79,8 +79,8 @@ const Vpn = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
                   className="hidden laptop:flex flex-col min-w-[15rem] rounded-lg overflow-hidden w-full">
-                    <Link to="thailand" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
-                    <Link to="contact" className='flex items-center justify-center gap-4 p-2 py-5 font-medium text-center transition-all hover:h-full h-1/2 hover:brightness-110 bg-primary-300 text-background-dark' >Get Started  <BsArrowRight className="scale-150" /> </Link>
+                    <Link to="/thailand#services_th" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
+                    <Link to="/contact" className='flex items-center justify-center gap-4 p-2 py-5 font-medium text-center transition-all hover:h-full h-1/2 hover:brightness-110 bg-primary-300 text-background-dark' >Get Started  <BsArrowRight className="scale-150" /> </Link>
                 </motion.div>
               </div>
 
@@ -110,8 +110,8 @@ const Vpn = () => {
                   className="flex 
                   tablet:w-1/2
                   laptop:hidden flex-col min-w-[15rem] rounded-lg overflow-hidden w-full mt-auto">
-                    <Link to="thailand" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
-                    <Link to="contact" className='flex items-center justify-center gap-4 p-2 py-5 font-medium text-center transition-all hover:h-full h-1/2 hover:brightness-110 bg-primary-300 text-background-dark' >Get Started  <BsArrowRight className="scale-150" /> </Link>
+                    <Link to="/thailand#services_th" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
+                    <Link to="/contact" className='flex items-center justify-center gap-4 p-2 py-5 font-medium text-center transition-all hover:h-full h-1/2 hover:brightness-110 bg-primary-300 text-background-dark' >Get Started  <BsArrowRight className="scale-150" /> </Link>
                 </motion.div>
               </div>
 
