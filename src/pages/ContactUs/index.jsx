@@ -37,7 +37,7 @@ const ContactUs = () => {
                     mobile:text-xl
                     tablet:text-3xl
                   '>
-                    Start a Project with 
+                    Contact
                     <span className='font-bold text-primary-300 text-lg pl-2
                       mobile:text-2xl
                       tablet:text-5xl
@@ -65,11 +65,11 @@ const ContactUs = () => {
                   <div className='grid col-span-1 gap-5
                     mobile:grid mobile:gap-10
                   '>
-                    <div className='flex flex-col gap-1 '>
+                    {/* <div className='flex flex-col gap-1 '>
                       <p className='text-secondary-800/60 text-xs'>Contact Details</p>
                       <p className='text-background-dark'>dmrs.thailand@dmrs.com</p>
                       <p className='text-background-dark'>+8(02) 345 678</p>
-                    </div>
+                    </div> */}
                     <div className='flex flex-col gap-1'>
                       <p className='text-secondary-800/60 text-xs'>Business Details</p>
                       <p className='text-background-dark'>P.O. Box 37</p>
