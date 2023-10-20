@@ -75,7 +75,7 @@ const DefaultNavbar = ({ nav, cta }) => {
       <img src="./images/logo-1.png" className='h-3/4' alt="" />
 
       <div className="flex items-center gap-8">
-        <NavLink className={({ isActive }) => isActive ? 'text-primary-300' : 'text-white transition-all hover:text-primary-300 active:brightness-90'} to="/dmrs/">
+        <NavLink className={({ isActive }) => isActive ? 'text-primary-300' : 'text-white transition-all hover:text-primary-300 active:brightness-90'} to="/">
           Home
         </NavLink>
 
@@ -117,7 +117,7 @@ const MobileNavbar = ({ nav }) => {
 
       <div className={`absolute top-0 left-0 z-40 pt-16 bg-background-dark text-white w-full transition-[height] ease-out duration-200 overflow-hidden ${isOpen ? 'h-[100vh]' : 'h-0'}`}>
         <div className="flex flex-col items-center justify-center w-full gap-5 text-md">
-          <NavLink onClick={() => { setIsOpen(false) }} className={({ isActive }) => isActive ? 'text-primary-300' : 'text-white transition-all hover:text-primary-300 active:brightness-90'} to="/dmrs/">
+          <NavLink onClick={() => { setIsOpen(false) }} className={({ isActive }) => isActive ? 'text-primary-300' : 'text-white transition-all hover:text-primary-300 active:brightness-90'} to="/">
             Home
           </NavLink>
 

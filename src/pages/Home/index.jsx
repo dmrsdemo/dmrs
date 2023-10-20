@@ -88,7 +88,7 @@ const Home = () => {
                   className="hidden flex-col min-w-[15rem] rounded-lg overflow-hidden w-full
                   laptop:flex
                   ">
-                    <Link to="thailand" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
+                    <Link to="thailand#services_th" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
                     <Link to="contact" className='flex items-center justify-center gap-4 p-2 py-5 font-medium text-center transition-all hover:h-full h-1/2 hover:brightness-110 bg-primary-300 text-background-dark' >Get Started  <BsArrowRight className="scale-150" /> </Link>
                 </motion.div>
               </div>
@@ -133,7 +133,7 @@ const Home = () => {
                   className="flex flex-col min-w-[15rem] rounded-lg overflow-hidden w-full mt-auto
                   tablet:w-1/2
                   laptop:hidden ">
-                    <Link to="thailand" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
+                    <Link to="thailand#services_th" className='flex items-center justify-center p-2 py-5 font-medium text-center transition-all bg-white hover:h-full h-1/2 text-background-dark' >Our Services</Link>
                     <Link to="contact" className='flex items-center justify-center gap-4 p-2 py-5 font-medium text-center transition-all hover:h-full h-1/2 hover:brightness-110 bg-primary-300 text-background-dark' >Get Started  <BsArrowRight className="scale-150" /> </Link>
                 </motion.div>
               </div>
@@ -180,7 +180,7 @@ const Home = () => {
               </p>
 
               <Button size="xs" variant='default' className=" w-fit !bg-accent-400 !ring-accent-400 text-white">
-                <Link to="/dmrs/australia">
+                <Link to="/australia">
                   Go to DMRS Australia
                 </Link>
               </Button>
@@ -205,7 +205,7 @@ const Home = () => {
               </p>
 
               <Button size="xs" variant='default' className=" w-fit !bg-accent-400 !ring-accent-400 text-white">
-                <Link to="/dmrs/thailand">
+                <Link to="/thailand">
                   Go to DMRS Thailand
                 </Link>
               </Button>
@@ -230,7 +230,7 @@ const Home = () => {
               </p>
 
               <Button size="xs" variant='default' className="w-fit">
-                <Link to="/dmrs/contact">
+                <Link to="/contact">
                   Get Started
                 </Link>
               </Button>
