@@ -226,7 +226,7 @@ const Home = () => {
               desktop:text-sm 
               hd:text-md
               '>
-                We specialize in pharmaceuticals and the protection of and identifying risks associated with medicines worldwide.
+                We specialize in pharmaceuticals and the protection of and identifying risks associated with the trade in medicines worldwide.
               </p>
 
               <Button size="xs" variant='default' className="w-fit">
@@ -385,7 +385,7 @@ const Home = () => {
             <img src="./images/sheild-dynamic-color.png" className='w-1/4' alt="" />
             <h2 className='text-lg font-bold text-center 
             hd:text-2xl hd:text-left
-            '> What are <span className="text-primary-300">we</span> offering?</h2>
+            '> What do <span className="text-primary-300">we</span> offer?</h2>
           </motion.div>
 
 
@@ -394,7 +394,7 @@ const Home = () => {
           laptop:w-full laptop:px-5 laptop:gap-5 
           hd:text-base hd:gap-10
           ">
-            <p className='text-justify'>The services DMRS offers fall into three broad areas, labeled as <strong>Intelligence</strong>, <strong>Investigations</strong>,
+            <p className='text-justify'>The services DMRS offer fall into three broad areas - <strong>Intelligence</strong>, <strong>Investigations</strong>,
               and <strong>Research</strong>.
             </p>
             <p className='text-justify'>

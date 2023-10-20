@@ -241,7 +241,7 @@ const Australia = () => {
             tablet:min-w-[565px] tablet:text-sm">
             <strong className="text-accent-800">DMRS </strong>
             <strong className="text-primary-400">Australia </strong>
-            Pty Ltd Pty Ltd operates all services offered under the banners of DMRS, Dan Murdoch Risk Services, Your Intelligence Program, and DMRS VPN.
+            DMRS Australia Pty Ltd Pty Ltd operate all services offered under the banners of DMRS, Dan Murdoch Risk Services, Your Intelligence Program, and DMRS VPN.
           </p>
         </div>
         

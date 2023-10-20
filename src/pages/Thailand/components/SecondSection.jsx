@@ -13,7 +13,7 @@ const contents =[
   },
   {
     title: 'Global Protection',
-    paragraph: <>DMRS is proud to be focused on the <strong>protection of patients globally</strong> through our identification of risks concerned with the illicit trade in counterfeit, sub-standard and suspect medicines together with all associated risks to corporations tasked with the protection of consumers worldwide.</>,
+    paragraph: <>DMRS is proud to be focused on the <strong>protection of patients globally</strong> through our identification of risks concerned with the illicit trade in counterfeit, sub-standard and suspect medicines together with all associated risks to corporations required with the protection of their consumers worldwide.</>,
   },
 ]
 
