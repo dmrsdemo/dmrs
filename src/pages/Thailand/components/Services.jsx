@@ -9,9 +9,10 @@ const Services = ({ name, icon, content, subContents }) => {
   const [isActive, setIsActive] = useState(false)
   console.log(subContents.length)
   return (
-    <div
-      className={`relative overflow-hidden ease-in-out duration-300 flex flex-col text-base gap-2 bg-white ring-1 ring-gray-400 fill-accent-400/20 justify-center items-start aspect-video 
-        ${isActive ? 'max-w-[100%] ' + `${subContents.length > 1 ? 'min-h-[calc(100vh/1.3)] tablet:min-h-[calc(100vh/1.5)] laptop:min-h-[calc(100vh/1.75)] desktop:min-h-[calc(100vh/1.55)]' : 'min-h-[360px]'}` + ' scale-[1.03] fill-accent-200/20 text-white ': 'min-h-[300px] max-w-[100%] tablet:min-h-[320px] desktop:min-h-[360px] hover:scale-[1.03] hover:text-white'}
+    <motion.div
+      animate={{ height: isActive ? '100%' : '100%' , transition: { duration: 0.3, ease: 'easeInOut'} }}
+      className={`relative overflow-hidden ease-in-out duration-300 flex flex-col text-base gap-2 bg-white ring-1 ring-gray-400 fill-accent-400/20 justify-center items-start
+        ${isActive ? 'max-w-[100%] scale-[1.03] fill-accent-200/20 text-white ': 'min-h-[300px] max-w-[100%] tablet:min-h-[320px] desktop:min-h-[360px] hover:scale-[1.03] hover:text-white'}
         tablet:min-w-full
         laptop:text-md 
         desktop:text-md
@@ -21,22 +22,12 @@ const Services = ({ name, icon, content, subContents }) => {
     >
       <div className={`card-scroll flex flex-col w-full h-full items-start justify-start px-6 mobile:px-6 tablet:px-6 laptop:px-8 desktop:px-8 pt-6 pb-12 gap-2 z-10 ${isActive ? 'items-start flex-col overflow-y-auto tablet:overflow-y-auto laptop:overflow-y-auto desktop:overflow-y-auto delay-200' : 'items-center'}`}>
         {isActive ? 
-          subContents.map((subContent, index) => {
-            return(
-              <div 
-                key={index}
-                className={`flex flex-col gap-2`}>
-                  <h2 className='text-base mobile:text-md laptop:text-md desktop:text-md font-bold'>{subContent.title}</h2>
-                  <p className='text-sm'>{subContent.description}</p>
-              </div>
-            )
-          }) 
-          : <div className="flex flex-col gap-2">{name}{content}</div> 
+          subContents.map((subContent, index) => <CardContent key={index} description={subContent.description} title={subContent.title} />) : <div className="flex flex-col gap-2">{name}{content}</div> 
         }
       </div>
       <span className={`absolute top-16 -right-[10%] z-0 duration-500 ${isActive ? 'scale-125 rotate-12' : ' rotate-0'} `}>{icon}</span>
       <span className={`absolute z-20 ${isActive ? 'text-white bg-gradient-to-t from-accent-500 via-accent-500/90 to-accent-500/10' : ''} w-full pb-3 pt-6 bottom-0 px-6 mobile:px-6 tablet:px-6 laptop:px-8 text-xs cursor-pointer mobile:text-sm laptop:text-sm`}><button onClick={() => {setIsActive((prevState) => !prevState)}}>{isActive ? 'Click to Hide <' : 'Click to Show >'}</button></span>
-    </div>
+    </motion.div>
   )
 }
 
