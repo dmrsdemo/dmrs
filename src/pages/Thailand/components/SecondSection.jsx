@@ -9,7 +9,7 @@ const contents =[
   },
   {
     title: 'Premier and Innovative',
-    paragraph: <>Our facilities also offer <strong>premier and innovative investigative consultancy</strong> in all areas of corporate and personal requirements.</>,
+    paragraph: <>DMRS offer a <strong>premier and innovative investigative consultancy</strong> in all areas of corporate and personal requirements.</>,
   },
   {
     title: 'Global Protection',
