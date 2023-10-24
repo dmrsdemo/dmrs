@@ -42,8 +42,10 @@ const Footer = () => {
  
                 if (response == 'success') {
                     setIsHuman(true);
+                    console.log('true')
                 } else {
                     setIsHuman(false);
+                    console.log('false')
                 }
             }
         }
@@ -104,10 +106,8 @@ const Footer = () => {
                                 <FormInput className="text-background-light" label='Message' name='message' placeholder='Leave us a message!' onInput={handleOnInput} value={formData.message} number="03" />
 
                                 {isHuman ?
-                                    <a className='w-full h-full' href={`mailto:${import.meta.env.VITE_EMAIL}?subject=DMRS&body=${formData.message}%0D%0DSincerely yours,%0D${formData.name}%0D${formData.email}`}>
-                                        <Button type="button" size="sm" variant="outline" className="w-full">
-                                            Send us a Message!
-                                        </Button>
+                                    <a className='bg-primary-300 text-background-dark ring-1 ring-primary-300 rounded-lg cursor-pointer transition-all hover:brightness-110 active:brightness-90 text-sm py-[0.5rem] px-[1rem] text-center' href={`mailto:${import.meta.env.VITE_EMAIL}?subject=DMRS&body=${formData.message}%0D%0DSincerely yours,%0D${formData.name}%0D${formData.email}`}>
+                                        Send us a Message!
                                     </a>
                                     :
                                     <ReCAPTCHA ref={captchaRef} sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} onChange={captchaOnChange} />
