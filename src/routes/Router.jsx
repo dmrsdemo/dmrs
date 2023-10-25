@@ -12,34 +12,51 @@ import PrivacyPolicy from '../pages/PrivacyPolicy'
 import TermsAndConditions from '../pages/TermsAndConditions'
 import Vpn from '../pages/VPN'
 import NotFound from '../pages/404'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<App/>}>
-            <Route index element={<Home/>}/>
-            
-            <Route path="thailand" element={<Thailand/>}/>
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route index element={<Home />} />
 
-            <Route path="australia" element={<Australia/>}/>
+      <Route path="thailand" element={<Thailand />} />
 
-            <Route path="vpn" element={<Vpn/>}/>
+      <Route path="australia" element={<Australia />} />
 
-            <Route path="contact" element={<ContactUs/>}/>
+      <Route path="vpn" element={<Vpn />} />
 
-            <Route path="terms" element={<TermsAndConditions/>}/>
+      <Route path="contact" element={<ContactUs />} />
 
-            <Route path="policy" element={<PrivacyPolicy/>}/>
+      <Route path="terms" element={<TermsAndConditions />} />
+
+      <Route path="policy" element={<PrivacyPolicy />} />
 
 
-            <Route path='*' element={<NotFound/>}/>
-        </Route>
+      <Route path='*' element={<NotFound />} />
+    </Route>
 
-    ) 
+  )
 )
 
 const Router = () => {
   return (
-    <RouterProvider router={router}/>
+    <>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        style={{fontSize: '.8rem'}}
+      />
+      <RouterProvider router={router} />
+    </>
   )
 }
 

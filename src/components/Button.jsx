@@ -9,8 +9,8 @@ const Button = ({
     children,
     ...props }) => {
 
-    const { className } = props;
-
+    const { className, disabled } = props;
+        
     const variants = {
         variant: {
             default: `bg-primary-300 text-background-dark ring-1 ring-primary-300`,
@@ -26,11 +26,11 @@ const Button = ({
             xl: 'text-xl py-[1.594rem] px-[3.188rem]',
         },
 
-        default: 'rounded-lg cursor-pointer transition-all hover:brightness-110 active:brightness-90'
+        default: 'rounded-lg cursor-pointer transition-all hover:brightness-110 active:brightness-90 disabled:bg-gray-200 disabled:pointer-events-none disabled:ring-gray-200'
     }
     
     return (
-        <button className={`${variants.variant[variant]} ${variants.size[size]} ${variants.default} ${className || ''}`}>
+        <button disabled={disabled} className={`${variants.variant[variant]} ${variants.size[size]} ${variants.default} ${className || ''}`}>
             {children}
         </button>
     )

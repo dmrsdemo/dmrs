@@ -3,17 +3,35 @@ import FormInput from './Form/FormInput';
 import Button from './Button';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
-
+import axios from 'axios';
+import { toast } from 'react-toastify';
 const Footer = () => {
     const location = useLocation();
+
+    const defaultFormData = { name: '', email: '', message: '' };
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [isHuman, setIsHuman] = useState(false)
+    const [sending, setSending] = useState(false);
     const path = location.pathname;
     const captchaRef = useRef(null);
 
     const handleFormSubmit = async (e) => {
+        setSending(true);
+
         e.preventDefault();
-        const { name, email, message } = formData;
+        const token = captchaRef.current.getValue();
+
+        try {
+            const response = await axios.post('https://yourintell.com/php/email.php', { ...formData, token });
+            const { data, status } = response;
+            setFormData(defaultFormData);
+            toast.success(data.message)
+        } catch (error) {
+            const { data, status } = error.response;
+            toast.error(data.message)
+        }
+
+        setSending(false);
+        captchaRef.current.reset();
     }
 
     const handleOnInput = (e) => {
@@ -22,33 +40,6 @@ const Footer = () => {
             ...prevFormData,
             [inputName]: e.target.value
         }));
-    }
-
-    const captchaOnChange = async (e) => {
-        if (!e) {
-            setIsHuman(false)
-            return;
-        }
-
-        const token = captchaRef.current.getValue();
-
-        if (token) {
-            const data = await fetch(`https://yourintell.com/email.php?token=${token}`,
-                {
-                    method: 'GET',
-                });
-            if (data.ok) {
-                const { response } = await data.json();
- 
-                if (response == 'success') {
-                    setIsHuman(true);
-                    console.log('true')
-                } else {
-                    setIsHuman(false);
-                    console.log('false')
-                }
-            }
-        }
     }
 
     return (
@@ -99,21 +90,15 @@ const Footer = () => {
 
                             <h2 className='text-xl tablet:text-3xl text-left text-white'>CONTACT <span className='text-accent-500'>US</span></h2>
 
-                            <form action="#" className='flex flex-col gap-8 text-xs mobile:text-sm' onSubmit={handleFormSubmit}>
-                                <FormInput className="text-background-light" label='Name' name='name' placeholder='Enter your name' onInput={handleOnInput} value={formData.name} number="01" />
-                                <FormInput className="text-background-light" label='Email Address' name='email' placeholder='Enter your email address' onInput={handleOnInput} value={formData.email} number="02" />
-                                {/* <FormInput className='text-background-light' label="What services are you looking for?" name='services' placeholder='Data Collection, Online Investigations, Business Intelligence' onInput={handleOnInput} value={formData.services} number="03" /> */}
-                                <FormInput className="text-background-light" label='Message' name='message' placeholder='Leave us a message!' onInput={handleOnInput} value={formData.message} number="03" />
+                            <form className='flex flex-col gap-8 text-xs mobile:text-sm' onSubmit={handleFormSubmit}>
+                                <FormInput className="text-background-light active:!bg-black" label='Name' name='name' placeholder='Enter your name' onInput={handleOnInput} value={formData.name} number="01" />
+                                <FormInput className="text-background-light active:!bg-black" label='Email Address' name='email' placeholder='Enter your email address' onInput={handleOnInput} value={formData.email} number="02" />
+                                <FormInput className="text-background-light active:!bg-black" label='Message' name='message' placeholder='Leave us a message!' onInput={handleOnInput} value={formData.message} number="03" />
 
-                                {isHuman ?
-                                    <a className='bg-primary-300 text-background-dark ring-1 ring-primary-300 rounded-lg cursor-pointer transition-all hover:brightness-110 active:brightness-90 text-sm py-[0.5rem] px-[1rem] text-center' href={`mailto:${import.meta.env.VITE_EMAIL}?subject=DMRS&body=${formData.message}%0D%0DSincerely yours,%0D${formData.name}%0D${formData.email}`}>
-                                        Send us a Message!
-                                    </a>
-                                    :
-                                    <ReCAPTCHA ref={captchaRef} sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} onChange={captchaOnChange} />
-                                }
-
-
+                                <ReCAPTCHA ref={captchaRef} sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} />
+                                <Button disabled={sending}>
+                                    {!sending ? "Send us a message!" : 'Sending...'}
+                                </Button>
                             </form>
                         </div>
                     </>

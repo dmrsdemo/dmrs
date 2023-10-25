@@ -3,17 +3,31 @@ import FormInput from '../../components/Form/FormInput'
 import Button from '../../components/Button'
 import WorldMap from './components/WorldMap'
 import ReCAPTCHA from 'react-google-recaptcha';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const ContactUs = () => {
 
+  const defaultFormData = { name: '', email: '', message: '' };
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [isHuman, setIsHuman] = useState(false)
   const captchaRef = useRef(null);
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    const { name, email, message } = formData;
-}
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        const token = captchaRef.current.getValue();
+
+        try {
+            const response = await axios.post('https://yourintell.com/php/email.php', { ...formData, token });
+            const { data, status } = response;
+            setFormData(defaultFormData);
+            toast.success(data.message)
+        } catch (error) {
+            const { data, status } = error.response;
+            toast.error(data.message)
+        }
+
+        captchaRef.current.reset();
+    }
 
   const handleOnInput = (e) => {
     const inputName = e.target.name;
@@ -22,33 +36,6 @@ const ContactUs = () => {
       [inputName]: e.target.value
     }));
   }
-
-  const captchaOnChange = async (e) => {
-    if (!e) {
-      setIsHuman(false)
-      return;
-    }
-
-    const token = captchaRef.current.getValue();
-
-    if (token) {
-      const data = await fetch(`https://yourintell.com/email.php?token=${token}`,
-        {
-          method: 'GET',
-        });
-      if (data.ok) {
-        const { response } = await data.json();
-
-        if (response == 'success') {
-          setIsHuman(true);
-        } else {
-          setIsHuman(false);
-        }
-      }
-    }
-  }
-
-
   return (
     <div className="flex gap-10 w-full bg-background-light navTrigger laptop:gap-0 justify-center py-24
           mobile:py-24
@@ -95,14 +82,8 @@ const ContactUs = () => {
                 <FormInput className='text-background-dark' label='Message' name='message' placeholder='Leave us a message!' onInput={handleOnInput} value={formData.message} number="03" />
               </div>
 
-              {isHuman ?
-                <a className='bg-primary-300 text-background-dark ring-1 ring-primary-300 rounded-lg cursor-pointer transition-all hover:brightness-110 active:brightness-90 text-sm py-[0.5rem] px-[1rem] text-center' href={`mailto:${import.meta.env.VITE_EMAIL}?subject=DMRS&body=${formData.message}%0D%0DSincerely yours,%0D${formData.name}%0D${formData.email}`}>
-                  Send it!
-                </a>
-                :
-                <ReCAPTCHA ref={captchaRef} sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} onChange={captchaOnChange} />
-              }
-
+              <ReCAPTCHA ref={captchaRef} sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} />
+              <Button>Send it!</Button>
             </form>
             <div className='grid col-span-1 gap-5
                     mobile:grid mobile:gap-10
