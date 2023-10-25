@@ -7,7 +7,6 @@ import { BsArrowLeft } from "react-icons/bs"
 
 const Services = ({ name, icon, content, subContents }) => {
   const [isActive, setIsActive] = useState(false)
-  console.log(subContents.length)
   return (
     <motion.div
       animate={{ height: isActive ? '100%' : '100%' , transition: { duration: 0.3, ease: 'easeInOut'} }}
