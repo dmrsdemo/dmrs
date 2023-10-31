@@ -73,7 +73,7 @@ const Footer = () => {
                         <NavLink className={({ isActive }) => isActive ? 'text-primary-300' : 'text-white transition-all hover:text-primary-300 active:brightness-90'} to="terms">Terms & Conditions</NavLink>
                     </div>
 
-                    <p>&copy; 2021 Yourintell.com</p>
+                    <p>&copy; 2023 Yourintell.com</p>
                 </div>
             </div>
 
